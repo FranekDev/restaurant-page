@@ -1,2 +1,3 @@
-console.log('test test');
-console.log('123');
+import loadHome from './home';
+
+loadHome();
