@@ -1,7 +1,8 @@
 import Nav from './navbar';
+import Footer from './footer';
 
 const Home = () => {
-    const body = document.querySelector('body');
+    const content = document.querySelector('#content');
 
     const home = document.createElement('div');
     home.classList.add('home');
@@ -15,12 +16,13 @@ const Home = () => {
     home.appendChild(title);
     home.appendChild(description);
 
-    body.appendChild(home);
+    content.appendChild(home);
 };
 
 const loadHome = () => {
     Nav();
     Home();
+    Footer();
 }
 
 export default loadHome;

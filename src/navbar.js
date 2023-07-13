@@ -1,10 +1,9 @@
 import loadHome from './home';
-import Menu from './menu';
-import Contact from './contact';
-import Footer from './footer';
+import loadMenu from './menu';
+import loadContact from './contact';
 
 const Nav = () => {
-    const body = document.querySelector('body');
+    const content = document.querySelector('#content');
     const navBar = document.createElement('nav');
     navBar.classList.add('nav-bar');
 
@@ -20,26 +19,22 @@ const Nav = () => {
     navBar.appendChild(menu);
     navBar.appendChild(contact);
 
-    body.appendChild(navBar);
+    content.appendChild(navBar);
 
     home.addEventListener('click', () => {
-        body.innerHTML = "";
+        content.innerHTML = '';
         loadHome();
-        Footer();
     });
 
     
     menu.addEventListener('click', () => {
-        body.innerHTML = "";
-        Nav();
-        Menu();
-        Footer();
+        content.innerHTML = '';
+        loadMenu();
     });
 
     contact.addEventListener('click', () => {
-        body.innerHTML = "";
-        Nav();
-        Contact();
+        content.innerHTML = '';
+        loadContact();
     });
 
 };

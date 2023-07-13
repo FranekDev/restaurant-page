@@ -1,5 +1,8 @@
+import Nav from './navbar';
+import Footer from './footer';
+
 const Contact = () => {
-    const body = document.querySelector('body');
+    const content = document.querySelector('#content');
     const contact = document.createElement('div');
     contact.classList.add('contact');
 
@@ -15,9 +18,13 @@ const Contact = () => {
     contact.appendChild(email);
     contact.appendChild(address);
 
-    body.appendChild(contact);
+    content.appendChild(contact);
 };
 
-// const loadContact
+const loadContact = () => {
+    Nav();
+    Contact();
+    Footer();
+};
 
-export default Contact;
+export default loadContact;
